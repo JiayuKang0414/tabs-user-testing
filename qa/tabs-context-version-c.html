@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
-  <title>Tabs Component Documentation | University of Maryland Design System</title>
+  <title>Academics | University of Maryland</title>
 
   <!-- ============================================================
        UMD Critical CSS — Hybrid CDN + Local
@@ -768,30 +768,19 @@
       color: #000000 !important;
     }
 
-    /* Version B: stable layout with stronger visual scale and weight. */
-    .qa-tabs-b div[slot="tabs"] button {
-      color: #242424 !important;
-      transform: scale(1);
-      transform-origin: center;
-      transition: transform 160ms ease, font-weight 160ms ease;
-    }
-    .qa-tabs-b div[slot="tabs"] button[aria-expanded="true"] {
-      color: #242424 !important;
-      font-weight: 700 !important;
-      transform: scale(1.12);
-    }
-
-    /* Version C: selected outline combined with the DS red underline. */
+    /* Version C: bordered tabs with a stronger selected state. */
     .qa-tabs-c div[slot="tabs"] button {
       background: #ffffff !important;
+      border: 1px solid #b7b7b7 !important;
+      box-sizing: border-box;
       color: #242424 !important;
       min-height: 48px;
     }
     .qa-tabs-c div[slot="tabs"] button[aria-expanded="true"] {
       background: #ffffff !important;
+      border-color: #000000 !important;
+      box-shadow: inset 0 0 0 1px #000000;
       color: #000000 !important;
-      outline: 2px solid #000000;
-      outline-offset: -2px;
     }
   </style>
 
@@ -800,7 +789,7 @@
 </head>
 <body>
   <div style="background:#ffeb3b;color:#000;padding:8px 16px;font:13px/1.4 monospace;border-bottom:2px solid rgba(0,0,0,.2);position:sticky;top:0;z-index:9999;">
-    QA: Tabs Component | UMD Design System Documentation Context
+    QA: Tabs Component | UMD Academics Context
   </div>
 
   <umd-element-navigation-utility data-alert-off="true" role="navigation" aria-label="Utility navigation"></umd-element-navigation-utility>
@@ -812,33 +801,33 @@
     </a>
     <nav slot="main-navigation">
       <umd-element-nav-item>
-        <a slot="primary-link" href="#example">Components</a>
+        <a slot="primary-link" href="#example">Academics</a>
         <div slot="dropdown-links">
-          <a href="#guidance">Usage guidance</a>
-          <a href="#example">Tabs example</a>
-          <a href="#accessibility">Accessibility</a>
+          <a href="#guidance">Explore academics</a>
+          <a href="#example">Academic options</a>
+          <a href="#support">Student support</a>
         </div>
       </umd-element-nav-item>
       <umd-element-nav-item>
-        <a slot="primary-link" href="#example">Foundations</a>
+        <a slot="primary-link" href="#example">Programs</a>
       </umd-element-nav-item>
       <umd-element-nav-item>
-        <a slot="primary-link" href="#accessibility">Resources</a>
+        <a slot="primary-link" href="#support">Student Resources</a>
       </umd-element-nav-item>
     </nav>
     <div slot="primary-slide-links">
-      <a href="#example"><span>Components</span></a>
-      <a href="#example"><span>Foundations</span></a>
-      <a href="#accessibility"><span>Resources</span></a>
+      <a href="#example"><span>Academics</span></a>
+      <a href="#example"><span>Programs</span></a>
+      <a href="#support"><span>Student Resources</span></a>
     </div>
   </umd-element-navigation-header>
 
   <section>
     <umd-element-hero-minimal data-theme="light">
-      <p slot="eyebrow">Components</p>
-      <h1 slot="headline">Tabs</h1>
+      <p slot="eyebrow">Academics</p>
+      <h1 slot="headline">A World-Sized Classroom</h1>
       <div slot="text">
-        <p>Similar to accordions, tabs group related content in a condensed space. They allow users to alternate between different views and information within the same area.</p>
+        <p>Explore more than 300 degree-granting programs and learning opportunities that connect the University of Maryland campus with Washington, D.C., the state and the world.</p>
       </div>
     </umd-element-hero-minimal>
   </section>
@@ -846,9 +835,8 @@
   <div class="umd-layout-space-horizontal-larger umd-layout-space-vertical-interior">
     <umd-element-breadcrumb>
       <div slot="paths">
-        <a href="https://designsystem.umd.edu/" aria-label="Return to the Design System home"><span aria-hidden="true">Home</span></a>
-        <a href="https://designsystem.umd.edu/components"><span>Components</span></a>
-        <p aria-label="Current page"><span>Tabs</span></p>
+        <a href="https://umd.edu/" aria-label="Return to the University of Maryland home"><span aria-hidden="true">Home</span></a>
+        <p aria-label="Current page"><span>Academics</span></p>
       </div>
     </umd-element-breadcrumb>
   </div>
@@ -856,81 +844,82 @@
   <main class="qa-tabs-test umd-layout-space-horizontal-small">
     <section id="guidance" class="qa-tabs-version umd-layout-vertical-landing">
       <umd-element-section-intro-wide>
-        <h2 slot="headline">Usage guidance</h2>
+        <h2 slot="headline">Explore Academics</h2>
       </umd-element-section-intro-wide>
       <div class="umd-layout-grid-gap-two">
         <umd-element-card-overlay data-theme="light">
-          <p slot="eyebrow">Do</p>
-          <h3 slot="headline">Use tabs for succinct, related content</h3>
-          <p slot="text">Use two or more tabs together. When the content becomes extensive, move it to separate pages instead of adding more material to each panel.</p>
+          <p slot="eyebrow">Programs</p>
+          <h3 slot="headline">Find the program that fits your goals</h3>
+          <p slot="text">Choose from undergraduate and graduate programs across a wide range of fields, or work with an advisor to shape an academic path around your interests.</p>
         </umd-element-card-overlay>
         <umd-element-card-overlay data-theme="light">
-          <p slot="eyebrow">Don't</p>
-          <h3 slot="headline">Avoid simultaneous reference tasks</h3>
-          <p slot="text">Do not use tabs when visitors need to see or compare information from separate panels at the same time.</p>
+          <p slot="eyebrow">Experiences</p>
+          <h3 slot="headline">Learn beyond the classroom</h3>
+          <p slot="text">Take part in research, internships, service, study abroad and other hands-on opportunities on campus, across Maryland and around the world.</p>
         </umd-element-card-overlay>
       </div>
     </section>
 
     <section id="example" class="qa-tabs-version umd-layout-vertical-landing">
       <umd-element-section-intro-wide>
-        <h2 slot="headline">Overview</h2>
+        <h2 slot="headline">Academic Options</h2>
       </umd-element-section-intro-wide>
       <umd-element-tabs class="qa-tabs-c">
         <div slot="tabs">
-          <div data-title="Variations">
-            <p style="font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;">Landing and interior pages</p>
-            <p style="font-size:16px;line-height:1.5;margin:0;">Tabs may be used on a landing page or within an interior or article page when the content and interaction remain appropriate for the format.</p>
-          </div>
-          <div data-title="Content">
-            <p style="font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;">Content</p>
-            <p style="font-size:18px;line-height:1.35;font-weight:700;margin:0 0 8px;">Concise and descriptive labels</p>
-            <p style="font-size:16px;line-height:1.5;margin:0 0 16px;">Each label should clearly describe the panel it reveals and act as an accessible name. Recommended length: 15 characters, with a maximum of 25.</p>
-            <p style="font-size:18px;line-height:1.35;font-weight:700;margin:0 0 8px;">Clear body copy and links</p>
-            <p style="font-size:16px;line-height:1.5;margin:0;">Write readable body copy and use descriptive link text that communicates both the destination and purpose. Avoid generic phrases such as “View more.”</p>
-          </div>
-          <div data-title="Layout">
-            <p style="font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;">Layout</p>
-            <p style="font-size:16px;line-height:1.5;margin:0 0 16px;">Use the component’s responsive layout and preserve enough room for concise tab labels across supported screen sizes.</p>
+          <div data-title="Undergraduate">
+            <p style="font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;">Undergraduate Programs</p>
+            <p style="font-size:16px;line-height:1.5;margin:0 0 16px;">Explore more than 100 majors along with minors, certificates and special programs. Students who are still deciding can receive guidance as they discover the subjects and opportunities that fit them best.</p>
             <umd-element-call-to-action data-display="secondary">
-              <a href="https://www.figma.com/design/YqgNlOMETaJbcI67sv8HUp/Downloadable-Components-File?node-id=201-79502">Open the Tabs Figma file</a>
+              <a href="https://admissions.umd.edu/programs">Explore undergraduate programs</a>
             </umd-element-call-to-action>
-            <p style="font-size:18px;line-height:1.35;font-weight:700;margin:24px 0 8px;">Related component</p>
-            <p style="font-size:16px;line-height:1.5;margin:0;"><a href="https://designsystem.umd.edu/components/accordion" style="color:#000000;font-weight:700;text-decoration:underline;">Accordion</a> groups related content into expandable blocks and is useful when longer labels or independently opened sections are needed.</p>
+          </div>
+          <div data-title="Graduate">
+            <p style="font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;">Graduate Programs</p>
+            <p style="font-size:16px;line-height:1.5;margin:0 0 16px;">UMD offers more than 230 graduate programs for advanced study, research and professional development. Search by degree type, academic level or field to find a program aligned with your goals.</p>
+            <umd-element-call-to-action data-display="secondary">
+              <a href="https://gradschool.umd.edu/admissions/all-graduate-programs">Explore graduate programs</a>
+            </umd-element-call-to-action>
+          </div>
+          <div data-title="Colleges &amp; Schools">
+            <p style="font-size:22px;line-height:1.25;font-weight:700;margin:0 0 12px;">Colleges &amp; Schools</p>
+            <p style="font-size:16px;line-height:1.5;margin:0 0 16px;">UMD's 12 colleges and schools bring together programs in the arts, business, education, engineering, humanities, journalism, public policy, the sciences and more.</p>
+            <umd-element-call-to-action data-display="secondary">
+              <a href="https://umd.edu/academics/colleges-and-schools">Explore colleges and schools</a>
+            </umd-element-call-to-action>
           </div>
         </div>
       </umd-element-tabs>
     </section>
 
-    <section id="accessibility" class="qa-tabs-version umd-layout-vertical-landing">
+    <section id="support" class="qa-tabs-version umd-layout-vertical-landing">
       <umd-element-sticky-columns data-layout-position="120px">
         <div slot="sticky-column">
-          <h2 class="umd-sans-largest-uppercase mb-md">Accessibility</h2>
+          <h2 class="umd-sans-largest-uppercase mb-md">Student Support</h2>
           <div class="umd-text-rich-advanced mb-sm">
-            <p>Accessible tabs communicate their interactive state clearly and remain understandable across input methods, screen sizes, and assistive technologies.</p>
+            <p>UMD provides practical resources to help students plan their studies, build skills, find community and prepare for what comes next.</p>
           </div>
         </div>
         <div slot="static-column">
           <div>
             <umd-element-accordion-item data-visual-open>
-              <span slot="headline">Keyboard accessible</span>
-              <div slot="text"><p>Visitors can reach tabs with the Tab key and activate a selected control with Enter or Space. Focus follows a sequential and logical order.</p></div>
+              <span slot="headline">Academic advising</span>
+              <div slot="text"><p>Academic advisors help students understand program requirements, choose courses and make informed decisions about their path to graduation.</p></div>
             </umd-element-accordion-item>
             <umd-element-accordion-item>
-              <span slot="headline">Hover and focus state</span>
-              <div slot="text"><p>Interactive tabs provide distinct hover and focus styling so visitors can recognize the available action and their current location.</p></div>
+              <span slot="headline">Tutoring and learning support</span>
+              <div slot="text"><p>Students can strengthen their learning through tutoring, writing support, guided study and other academic success services.</p></div>
             </umd-element-accordion-item>
             <umd-element-accordion-item>
-              <span slot="headline">Color contrast</span>
-              <div slot="text"><p>Text and background colors maintain sufficient contrast to support readability in selected, unselected, hover, and focus states.</p></div>
+              <span slot="headline">Libraries and study spaces</span>
+              <div slot="text"><p>University libraries provide research help, technology, collections and spaces for individual study and group work.</p></div>
             </umd-element-accordion-item>
             <umd-element-accordion-item>
-              <span slot="headline">Responsive</span>
-              <div slot="text"><p>The component reflows without truncating content or introducing horizontal scrolling when the viewport is narrow or the page is zoomed.</p></div>
+              <span slot="headline">Living-learning programs</span>
+              <div slot="text"><p>Honors, Scholars and other special programs connect students who share interests through courses, communities and hands-on experiences.</p></div>
             </umd-element-accordion-item>
             <umd-element-accordion-item>
-              <span slot="headline">Consistent</span>
-              <div slot="text"><p>Line height, typography, spacing, color, and state treatments remain consistent across every tab in the group.</p></div>
+              <span slot="headline">Career and internship support</span>
+              <div slot="text"><p>Career services help students explore possibilities, prepare application materials and connect classroom learning with internships and future careers.</p></div>
             </umd-element-accordion-item>
           </div>
         </div>
