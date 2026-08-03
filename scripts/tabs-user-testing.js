@@ -13,6 +13,9 @@
     var style = document.createElement('style');
     style.setAttribute('data-tabs-version-c-styles', '');
     style.textContent = [
+      '.tab-active-line-strip {',
+      '  background: transparent !important;',
+      '}',
       '.tab-active-line {',
       '  animation: none !important;',
       '  display: block !important;',
