@@ -15,7 +15,7 @@
     style.textContent = [
       '.tab-active-line {',
       '  animation: none !important;',
-      '  display: none !important;',
+      '  display: block !important;',
       '  transition: none !important;',
       '}'
     ].join('\n');
