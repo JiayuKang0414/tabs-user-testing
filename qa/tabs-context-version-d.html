@@ -797,6 +797,15 @@
     .qa-rich-text-section > h2 {
       margin-bottom: 24px !important;
     }
+
+    .umd-layout-space-vertical-headline-large {
+      margin-bottom: 16px !important;
+    }
+    @media (min-width: 1024px) {
+      .umd-layout-space-vertical-headline-large {
+        margin-bottom: 24px !important;
+      }
+    }
   </style>
 
   <script>window.process = window.process || { env: {} };</script>
@@ -869,9 +878,7 @@
     </section>
 
     <section id="example" class="qa-tabs-version umd-layout-vertical-landing">
-      <umd-element-section-intro-wide>
-        <h2 slot="headline">Academic Options</h2>
-      </umd-element-section-intro-wide>
+      <h2 class="text-black umd-sans-large umd-layout-space-vertical-headline-large">Academic Options</h2>
       <umd-element-tabs class="qa-tabs-c">
         <div slot="tabs">
           <div data-title="Undergraduate">
