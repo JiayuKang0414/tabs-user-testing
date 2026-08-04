@@ -807,6 +807,16 @@
     }
     .qa-tabs-e .tabs-button-wrapper ~ .tabs-button-wrapper {
       margin-top: 4px !important;
+      position: relative;
+    }
+    .qa-tabs-e .tabs-button-wrapper ~ .tabs-button-wrapper::before {
+      background: #000000;
+      content: "";
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: -3px;
+      width: 100%;
     }
     .qa-tabs-e div[slot="tabs"] button[aria-expanded="true"] {
       background: #ffffff !important;
@@ -819,6 +829,12 @@
       .qa-tabs-e .tabs-button-wrapper ~ .tabs-button-wrapper {
         margin-left: 4px !important;
         margin-top: 0 !important;
+      }
+      .qa-tabs-e .tabs-button-wrapper ~ .tabs-button-wrapper::before {
+        height: 100%;
+        left: -3px;
+        top: 0;
+        width: 1px;
       }
     }
 
