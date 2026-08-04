@@ -826,15 +826,31 @@
       color: #e21833 !important;
     }
     @media (min-width: 768px) {
+      .qa-tabs-e .tabs-content-wrapper {
+        display: inline-flex !important;
+        position: relative;
+        width: max-content;
+      }
+      .qa-tabs-e .tabs-content-wrapper::after {
+        background: #000000;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 0;
+      }
+      .qa-tabs-e .tabs-button-wrapper {
+        position: relative;
+        z-index: 1;
+      }
       .qa-tabs-e .tabs-button-wrapper ~ .tabs-button-wrapper {
         margin-left: 4px !important;
         margin-top: 0 !important;
       }
       .qa-tabs-e .tabs-button-wrapper ~ .tabs-button-wrapper::before {
-        height: 100%;
-        left: -3px;
-        top: 0;
-        width: 1px;
+        display: none;
       }
     }
 
